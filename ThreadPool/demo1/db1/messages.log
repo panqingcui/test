@@ -1,0 +1,280 @@
+2014-07-02 03:28:32.629+0000: Creating new db @ D:\ywj\ThreadPool\demo1\db1\neostore
+2014-07-02 03:28:37.114+0000: Opened [D:\ywj\ThreadPool\demo1\db1\nioneo_logical.log.1] clean empty log, version=0, lastTxId=1
+2014-07-02 03:28:37.229+0000: TM new log: tm_tx_log.1
+2014-07-02 03:28:37.411+0000: Opened [D:\ywj\ThreadPool\demo1\db1\index\lucene.log.1] clean empty log, version=0, lastTxId=1
+2014-07-02 03:28:37.473+0000: --- STARTUP diagnostics START ---
+2014-07-02 03:28:37.475+0000: Neo4j Kernel properties:
+    store_dir=D:\ywj\ThreadPool\demo1\db1
+    remote_logging_host=127.0.0.1
+    read_only=false
+    neo4j.ext.udc.host=udc.neo4j.org
+    logical_log=D:\ywj\ThreadPool\demo1\db1\nioneo_logical.log
+    remote_logging_port=4560
+    gc_monitor_threshold=200ms
+    load_kernel_extensions=true
+    array_block_size=120
+    intercept_committing_transactions=false
+    node_auto_indexing=false
+    neostore.relationshipstore.db.mapped_memory=4M
+    dump_configuration=false
+    gc_monitor_wait_time=100ms
+    cache_type=soft
+    intercept_deserialized_transactions=false
+    neostore.nodestore.db.mapped_memory=5M
+    neo4j.ext.udc.first_delay=600000
+    neo4j.ext.udc.reg=unreg
+    lucene_searcher_cache_size=2147483647
+    neo4j.ext.udc.interval=86400000
+    use_memory_mapped_buffers=false
+    rebuild_idgenerators_fast=true
+    ephemeral=false
+    neostore.propertystore.db.index.keys.mapped_memory=1M
+    neostore.propertystore.db.strings.mapped_memory=2M
+    neostore.propertystore.db.arrays.mapped_memory=3M
+    neo_store=D:\ywj\ThreadPool\demo1\db1\neostore
+    neostore.propertystore.db.index.mapped_memory=1M
+    backup_slave=false
+    neostore.propertystore.db.mapped_memory=3M
+    gcr_cache_min_log_interval=60s
+    relationship_auto_indexing=false
+    relationship_grab_size=100
+    string_block_size=120
+    lucene_writer_cache_size=2147483647
+    grab_file_lock=true
+    node_cache_array_fraction=1.0
+    remote_logging_enabled=false
+    allow_store_upgrade=false
+    execution_guard_enabled=false
+    neo4j.ext.udc.enabled=true
+    relationship_cache_array_fraction=1.0
+2014-07-02 03:28:37.490+0000: Diagnostics providers:
+    org.neo4j.kernel.configuration.Config
+    org.neo4j.kernel.info.DiagnosticsManager
+    SYSTEM_MEMORY
+    JAVA_MEMORY
+    OPERATING_SYSTEM
+    JAVA_VIRTUAL_MACHINE
+    CLASSPATH
+    LIBRARY_PATH
+    SYSTEM_PROPERTIES
+2014-07-02 03:28:37.491+0000: System memory information:
+    Total Physical memory: 3.70 GB
+    Free Physical memory: 837.89 MB
+    Committed virtual memory: 33.82 MB
+    Total swap space: 4.00 GB
+    Free swap space: 1.88 GB
+2014-07-02 03:28:37.564+0000: JVM memory information:
+    Free  memory: 3.95 MB
+    Total memory: 4.94 MB
+    Max   memory: 63.56 MB
+    Garbage Collector: Copy: [Eden Space, Survivor Space]
+    Garbage Collector: MarkSweepCompact: [Eden Space, Survivor Space, Tenured Gen, Perm Gen, Perm Gen [shared-ro], Perm Gen [shared-rw]]
+    Memory Pool: Code Cache (Non-heap memory): committed=832.00 kB, used=807.00 kB, max=32.00 MB, threshold=0.00 B
+    Memory Pool: Eden Space (Heap memory): committed=896.00 kB, used=443.95 kB, max=4.00 MB, threshold=?
+    Memory Pool: Survivor Space (Heap memory): committed=64.00 kB, used=41.29 kB, max=448.00 kB, threshold=?
+    Memory Pool: Tenured Gen (Heap memory): committed=4.00 MB, used=565.23 kB, max=59.13 MB, threshold=0.00 B
+    Memory Pool: Perm Gen (Non-heap memory): committed=12.00 MB, used=2.63 MB, max=64.00 MB, threshold=0.00 B
+    Memory Pool: Perm Gen [shared-ro] (Non-heap memory): committed=8.00 MB, used=5.08 MB, max=8.00 MB, threshold=0.00 B
+    Memory Pool: Perm Gen [shared-rw] (Non-heap memory): committed=12.00 MB, used=6.41 MB, max=12.00 MB, threshold=0.00 B
+2014-07-02 03:28:38.064+0000: Operating system information:
+    Operating System: Windows Vista; version: 6.1; arch: x86; cpus: 4
+    Process id: 9080@working
+    Byte order: LITTLE_ENDIAN
+2014-07-02 03:28:38.074+0000: JVM information:
+    VM Name: Java HotSpot(TM) Client VM
+    VM Vendor: Sun Microsystems Inc.
+    VM Version: 11.0-b15
+    JIT compiler: HotSpot Client Compiler
+    VM Arguments: [-Dfile.encoding=UTF-8]
+2014-07-02 03:28:38.074+0000: Java classpath:
+     [classpath + loader.0] file:/D:/view/antsoldier/antsoldier-common/antsoldier-neo4j/lib/commons-logging-1.1.1.jar
+     [loader.1] file:/D:/Program%20Files%20(x86)/Java/jre6/lib/ext/dnsns.jar
+     [classpath] E:\jar\java 监测\jnotify-lib-0.93\jnotify-lib-0.93\jnotify-0.93.jar
+     [loader.1] file:/D:/Program%20Files%20(x86)/Java/jre6/lib/ext/sunjce_provider.jar
+     [classpath + loader.0] file:/D:/ywj/ThreadPool/lib/jackson-core-asl-1.9.4.jar
+     [classpath + loader.0] file:/D:/ywj/ThreadPool/lib/ojdbc6-11.1.0.7.jar
+     [classpath + loader.0] file:/D:/view/antsoldier/antsoldier-common/antsoldier-neo4j/lib/neo4j-graph-matching-1.7.jar
+     [bootstrap] D:\Program Files (x86)\Java\jre6\lib\rt.jar
+     [classpath + loader.0] file:/D:/view/antsoldier/antsoldier-common/antsoldier-neo4j/lib/lucene-core-3.5.0.jar
+     [loader.0] file:/E:/jar/java%20%e7%9b%91%e6%b5%8b/jpathwatch-0-95.jar
+     [classpath + loader.0] file:/D:/view/antsoldier/antsoldier-common/antsoldier-neo4j/lib/neo4j-cypher-1.7.jar
+     [classpath + loader.0] file:/D:/view/antsoldier/antsoldier-common/antsoldier-neo4j/lib/neo4j-kernel-1.7.jar
+     [classpath + loader.0] file:/D:/view/antsoldier/antsoldier-common/antsoldier-hazelcast/lib/hazelcast-client-3.0.jar
+     [classpath + loader.0] file:/D:/ywj/ThreadPool/lib/mysql-connector-java-5.1.6.jar
+     [classpath + loader.0] file:/D:/view/antsoldier/antsoldier-common/antsoldier-neo4j/lib/jersey-core-1.4.jar
+     [loader.0] file:/E:/jar/SSH%e6%a1%86%e6%9e%b6jar%e7%a5%9e%e5%8c%85/SSH%e6%a1%86%e6%9e%b6jar%e7%a5%9e%e5%8c%85/commons-io-1.3.2.jar
+     [loader.1] file:/D:/Program%20Files%20(x86)/Java/jre6/lib/ext/localedata.jar
+     [classpath + loader.0] file:/D:/ywj/ThreadPool/lib/commons-logging-1.1.jar
+     [loader.1] file:/D:/Program%20Files%20(x86)/Java/jre6/lib/ext/sunpkcs11.jar
+     [classpath + loader.0] file:/D:/ywj/ThreadPool/lib/jackson-mapper-asl-1.9.4.jar
+     [classpath + loader.0] file:/D:/ywj/ThreadPool/lib/log4j-1.2.12.jar
+     [classpath + loader.0] file:/D:/view/antsoldier/antsoldier-common/antsoldier-neo4j/lib/neo4j-rest-graphdb-1.8.jar
+     [bootstrap] D:\Program Files (x86)\Java\jre6\lib\resources.jar
+     [classpath + loader.0] file:/D:/view/antsoldier/antsoldier-common/antsoldier-neo4j/lib/jackson-jaxrs-1.9.4.jar
+     [loader.0] file:/E:/jar/java%20%e7%9b%91%e6%b5%8b/jnotify-lib-0.93/jnotify-lib-0.93/jnotify-0.93.jar
+     [classpath + loader.0] file:/D:/ywj/ThreadPool/lib/snmp4j-2.0.3.jar
+     [classpath + loader.0] file:/D:/view/antsoldier/antsoldier-common/antsoldier-neo4j/lib/neo4j-jmx-1.7.jar
+     [bootstrap] D:\Program Files (x86)\Java\jre6\lib\charsets.jar
+     [classpath + loader.0] file:/D:/view/antsoldier/antsoldier-common/antsoldier-neo4j/lib/jackson-mapper-asl-1.9.4.jar
+     [classpath + loader.0] file:/D:/view/antsoldier/antsoldier-common/antsoldier-pdk/lib/ganymed-ssh2-build210.jar
+     [bootstrap] D:\Program Files (x86)\Java\jre6\lib\jce.jar
+     [classpath + loader.0] file:/D:/view/antsoldier/antsoldier-common/antsoldier-neo4j/lib/commons-io-2.1.jar
+     [classpath + loader.0] file:/D:/ywj/ThreadPool/lib/httpclient-4.2.1.jar
+     [classpath + loader.0] file:/E:/jar/slf4j/slf4j-api-1.5.8.jar
+     [classpath + loader.0] file:/D:/ywj/ThreadPool/bin/
+     [classpath + loader.0] file:/E:/jar/activemq/activemq-core-5.5.1.jar
+     [classpath + loader.0] file:/D:/ywj/ThreadPool/lib/httpcore-4.2.1.jar
+     [classpath] E:\jar\SSH框架jar神包\SSH框架jar神包\commons-io-1.3.2.jar
+     [classpath + loader.0] file:/D:/view/antsoldier/antsoldier-common/antsoldier-neo4j/lib/jersey-client-1.4.jar
+     [classpath + loader.0] file:/E:/jar/neo4j/jersey-server-1.9.jar
+     [classpath + loader.0] file:/D:/view/antsoldier/antsoldier-common/antsoldier-neo4j/lib/jta-1.1.jar
+     [classpath + loader.0] file:/E:/jar/activemq/geronimo-j2ee-management_1.1_spec-1.0.1.jar
+     [classpath + loader.0] file:/E:/jar/neo4j/jersey-server-2.0.jar
+     [classpath + loader.0] file:/E:/jar/slf4j/slf4j-log4j12-1.5.8.jar
+     [classpath + loader.0] file:/E:/jar/activemq/geronimo-jms_1.1_spec-1.1.1.jar
+     [classpath + loader.0] file:/D:/view/antsoldier/antsoldier-common/antsoldier-hazelcast/lib/hazelcast-3.0.jar
+     [bootstrap] D:\Program Files (x86)\Java\jre6\lib\sunrsasign.jar
+     [bootstrap] D:\Program Files (x86)\Java\jre6\lib\jsse.jar
+     [classpath + loader.0] file:/D:/view/antsoldier/antsoldier-common/antsoldier-neo4j/lib/jersey-bundle-1.4.jar
+     [classpath] E:\jar\java 监测\jpathwatch-0-95.jar
+     [classpath + loader.0] file:/D:/view/antsoldier/antsoldier-common/antsoldier-neo4j/lib/jackson-core-asl-1.9.4.jar
+     [classpath + loader.0] file:/D:/ywj/ThreadPool/lib/commons-lang-3.0-SNAPSHOT.jar
+     [classpath + loader.0] file:/D:/view/antsoldier/antsoldier-common/antsoldier-neo4j/lib/neo4j-graph-algo-1.7.jar
+     [classpath + loader.0] file:/D:/view/antsoldier/antsoldier-common/antsoldier-neo4j/lib/neo4j-lucene-index-1.7.jar
+     [classpath + loader.0] file:/D:/view/antsoldier/antsoldier-common/antsoldier-neo4j/lib/neo4j-udc-1.7.jar
+     [bootstrap] D:\Program Files (x86)\Java\jre6\classes
+     [loader.1] file:/D:/Program%20Files%20(x86)/Java/jre6/lib/ext/sunmscapi.jar
+     [classpath + loader.0] file:/D:/view/antsoldier/antsoldier-common/antsoldier-neo4j/lib/junit-4.6.jar
+2014-07-02 03:28:38.081+0000: Library path:
+    D:\Program Files (x86)\Java\jre6\bin
+    D:\ywj\ThreadPool
+    C:\Windows\Sun\Java\bin
+    C:\Windows\System32
+    C:\Windows
+    D:\Program Files (x86)\Java\jre6\bin\client
+    D:\Program Files (x86)\Java\jre6\bin
+    D:\Program Files (x86)\Java\jre6\lib\i386
+    C:\Windows\System32
+    C:\Windows
+    C:\Windows\System32\wbem
+    C:\Windows\System32\WindowsPowerShell\v1.0
+    C:\Program Files\Intel\INTEL(R) MANAGEMENT ENGINE COMPONENTS\DAL
+    C:\Program Files\Intel\INTEL(R) MANAGEMENT ENGINE COMPONENTS\IPT
+    C:\Program Files (x86)\Intel\INTEL(R) MANAGEMENT ENGINE COMPONENTS\DAL
+    C:\Program Files (x86)\Intel\INTEL(R) MANAGEMENT ENGINE COMPONENTS\IPT
+    D:\ywj\ThreadPool
+    D:\Program Files (x86)\Java\jdk1.6.0_10\bin
+    D:\Program Files (x86)\Java\jdk1.6.0_10\jre\bin
+    D:\Program Files (x86)\apache-maven-2.2.1\apache-maven-2.2.1\bin
+    C:\Program Files (x86)\Intel\OpenCL SDK\3.0\bin\x86
+    C:\Program Files (x86)\Intel\OpenCL SDK\3.0\bin\x64
+    D:\Program Files (x86)\Git\cmd
+    D:\Program Files (x86)\MySQL\MySQL Server 5.0\bin
+    D:\Program Files\TortoiseGit\bin
+    C:\Program Files\Intel\WiFi\bin
+    C:\Program Files\Common Files\Intel\WirelessCommon
+    D:\Program Files (x86)\SSH Communications Security\SSH Secure Shell
+    D:\Program Files (x86)\MySQL\MySQL Server 5.0\bin
+    C:\Program Files\Intel\WiFi\bin
+    C:\Program Files\Common Files\Intel\WirelessCommon
+    D:\Program Files (x86)\neo4j-community-1.7-windows\neo4j-community-1.7\bin\Neo4j.bat
+    E:\eclipse-jee-kepler-SR1-win32\eclipse
+2014-07-02 03:28:38.089+0000: System.properties:
+    sun.boot.library.path = D:\Program Files (x86)\Java\jre6\bin
+    path.separator = ;
+    file.encoding.pkg = sun.io
+    sun.java.launcher = SUN_STANDARD
+    user.country = CN
+    sun.os.patch.level = Service Pack 1
+    user.dir = D:\ywj\ThreadPool
+    user.variant = 
+    sun.jnu.encoding = GBK
+    sun.management.compiler = HotSpot Client Compiler
+    user.home = C:\Users\Administrator
+    user.timezone = Asia/Shanghai
+    file.encoding = UTF-8
+    user.name = Administrator
+    sun.arch.data.model = 32
+    user.language = zh
+    awt.toolkit = sun.awt.windows.WToolkit
+    file.separator = \
+    sun.io.unicode.encoding = UnicodeLittle
+    sun.cpu.endian = little
+    sun.desktop = windows
+    sun.cpu.isalist = pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86
+2014-07-02 03:28:38.118+0000: --- STARTUP diagnostics END ---
+2014-07-02 03:28:38.206+0000: Extension org.neo4j.kernel.KernelExtension[kernel jmx] loaded ok
+2014-07-02 03:28:38.234+0000: Extension org.neo4j.kernel.KernelExtension[kernel udc] loaded ok
+2014-07-02 03:28:38.251+0000: --- STARTUP diagnostics for KernelDiagnostics:Versions START ---
+2014-07-02 03:28:38.251+0000: Graph Database: org.neo4j.kernel.EmbeddedGraphDatabase StoreId[time:1404271712636, id:-3062353134715887369, store version: 13561656364791302]
+2014-07-02 03:28:38.251+0000: Kernel version: Neo4j - Graph Database Kernel 1.7
+2014-07-02 03:28:38.251+0000: Neo4j component versions:
+2014-07-02 03:28:38.252+0000:   Neo4j - Graph Database Kernel 1.7
+2014-07-02 03:28:38.252+0000: --- STARTUP diagnostics for KernelDiagnostics:Versions END ---
+2014-07-02 03:28:38.254+0000: --- STARTUP diagnostics for NEO_STORE_VERSIONS START ---
+2014-07-02 03:28:38.254+0000: Store versions:
+    Store versions:
+      NeoStore v0.A.0
+      NodeStore v0.A.0
+      RelationshipStore v0.A.0
+      RelationshipTypeStore v0.A.0
+      PropertyStore v0.A.0
+      PropertyIndexStore v0.A.0
+      StringPropertyStore v0.A.0
+      ArrayPropertyStore v0.A.0
+2014-07-02 03:28:38.254+0000: --- STARTUP diagnostics for NEO_STORE_VERSIONS END ---
+2014-07-02 03:28:38.254+0000: --- STARTUP diagnostics for NEO_STORE_ID_USAGE START ---
+2014-07-02 03:28:38.254+0000: Id usage:
+    Id usage:
+      NodeStore: used=1 high=0
+      RelationshipStore: used=0 high=-1
+      RelationshipTypeStore: used=0 high=-1
+      PropertyStore: used=0 high=-1
+      PropertyIndexStore: used=0 high=-1
+      StringPropertyStore: used=1 high=0
+      ArrayPropertyStore: used=1 high=0
+2014-07-02 03:28:38.255+0000: --- STARTUP diagnostics for NEO_STORE_ID_USAGE END ---
+2014-07-02 03:28:38.255+0000: --- STARTUP diagnostics for KernelDiagnostics:StoreFiles START ---
+2014-07-02 03:28:38.255+0000: Storage files:
+    active_tx_log: 11.00 B
+    index:
+      lucene-store.db: 40.00 B
+      lucene.log.1: 16.00 B
+      lucene.log.active: 4.00 B
+    - Total: 60.00 B
+    lock: 0.00 B
+    messages.log: 13.50 kB
+    neostore: 54.00 B
+    neostore.id: 9.00 B
+    neostore.nodestore.db: 9.00 B
+    neostore.nodestore.db.id: 9.00 B
+    neostore.propertystore.db: 0.00 B
+    neostore.propertystore.db.arrays: 128.00 B
+    neostore.propertystore.db.arrays.id: 9.00 B
+    neostore.propertystore.db.id: 9.00 B
+    neostore.propertystore.db.index: 0.00 B
+    neostore.propertystore.db.index.id: 9.00 B
+    neostore.propertystore.db.index.keys: 38.00 B
+    neostore.propertystore.db.index.keys.id: 9.00 B
+    neostore.propertystore.db.strings: 128.00 B
+    neostore.propertystore.db.strings.id: 9.00 B
+    neostore.relationshipstore.db: 0.00 B
+    neostore.relationshipstore.db.id: 9.00 B
+    neostore.relationshiptypestore.db: 0.00 B
+    neostore.relationshiptypestore.db.id: 9.00 B
+    neostore.relationshiptypestore.db.names: 38.00 B
+    neostore.relationshiptypestore.db.names.id: 9.00 B
+    nioneo_logical.log.1: 16.00 B
+    nioneo_logical.log.active: 4.00 B
+    tm_tx_log.1: 0.00 B
+2014-07-02 03:28:38.259+0000: --- STARTUP diagnostics for KernelDiagnostics:StoreFiles END ---
+2014-07-02 03:28:38.260+0000: Started - database is now available
+2014-07-02 03:28:38.260+0000: GC Monitor started. 
+2014-07-02 03:28:38.429+0000: Stopping - database is now unavailable
+2014-07-02 03:28:38.460+0000: GC Monitor stopped. 
+2014-07-02 03:28:38.469+0000: TM shutting down
+2014-07-02 03:28:38.553+0000: Closed log D:\ywj\ThreadPool\demo1\db1\index\lucene.log
+2014-07-02 03:28:39.152+0000: Closed log D:\ywj\ThreadPool\demo1\db1\nioneo_logical.log
+2014-07-02 03:28:46.195+0000: NeoStore closed
+2014-07-02 03:28:46.196+0000: --- SHUTDOWN diagnostics START ---
+2014-07-02 03:28:46.196+0000: --- SHUTDOWN diagnostics END ---

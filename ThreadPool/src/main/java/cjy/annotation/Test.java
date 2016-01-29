@@ -1,16 +1,14 @@
 /*
- * Copyright (c) ANTVISION 2011 All Rights Reserved Licensed under the Apache License, Version 2.0 (the "License"); you
- * may not use this file except in compliance with the License. You may obtain a copy of the License at
- * http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
- * either express or implied. See the License for the specific language governing permissions and limitations under the
+ * Copyright (c) ANTVISION 2011 All Rights Reserved Licensed under the Apache License,
+ * Version 2.0 (the "License"); you may not use this file except in compliance with the
+ * License. You may obtain a copy of the License at
+ * http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed
+ * to in writing, software distributed under the License is distributed on an "AS IS"
+ * BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under the
  * License.
  */
 package cjy.annotation;
-
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Random;
 
 /**
  * <p>功能描述,该部分必须以中文句号结尾。<p>
@@ -21,16 +19,30 @@ import java.util.Random;
  * @since 3.0.0
  */
 public class Test {
+    private static int count = 0;
+
     public static void main(String[] args) {
         // System.out.println(stringToLong("192.168.1.121"));
-        Random random = new Random();
-        System.out.println(random.nextInt(11) + 1);
-        Map<String, String> map = new HashMap<String, String>();
-        map.put("1", "李四");
-        map.put("2", "张三");
-        if (map != null) {
-            System.out.println(map);
+        // Random random = new Random();
+        // System.out.println(random.nextInt(11) + 1);
+        // Map<String, String> map = new HashMap<String, String>();
+        // map.put("1", "李四");
+        // map.put("2", "张三");
+        // if (map != null) {
+        // System.out.println(map);
+        // }
+    }
+
+    public int set(int sum) {
+        count++;
+        if (count >= 2) {
+            sum = count;
+            return sum;
+        } else {
+            set(sum);
         }
+        sysout 
+        return sum;
     }
     // public static long stringToLong(String ipaddress) {
     // long[] ip = new long[4];

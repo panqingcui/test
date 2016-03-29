@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0">
+<!-- 	<reference id="clientService" interface="com.antfact.oplate.service.HttpClientService" />	 -->
+
+<!--    <bean id="eurekaService" -->
+<!-- 		class="com.eureka.service.impl.ServiceImpl" -->
+<!-- 		init-method="init" > -->
+<!-- 				<property name="clientService" ref="clientService"></property> -->
+<!-- 	</bean> -->
+<!-- 	<service ref="eurekaService" interface="com.eureka.service.EurekaService" /> -->
+	
+<!--   <reference id="clientService" interface="com.antfact.oplate.config.client.api.ClientService" />	 -->
+
+   <bean id="eurekaService"
+		class="com.eureka.service.impl.ServiceImpl"
+		init-method="init" >
+	<!--  <property name="clientService" ref="clientService"></property> -->
+	</bean>
+	<service ref="eurekaService" interface="com.eureka.service.EurekaService" />
+</blueprint>

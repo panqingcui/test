@@ -41,7 +41,6 @@ public class Test {
         } else {
             set(sum);
         }
-        sysout 
         return sum;
     }
     // public static long stringToLong(String ipaddress) {

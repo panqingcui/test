@@ -2,10 +2,8 @@ package cjy.jvm;
 
 import org.apache.log4j.Logger;
 
-import cjy.timer.NewTimerTask;
-
 public class JavaVmStackOOM {
-    private static Logger logger = Logger.getLogger(NewTimerTask.class);
+    private static Logger logger = Logger.getLogger(JavaVmStackOOM.class);
 
     private void dontStop() {
         while (true) {

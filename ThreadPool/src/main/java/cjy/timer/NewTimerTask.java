@@ -20,7 +20,7 @@ import org.apache.log4j.Logger;
  * @version $Revision$ $Date$
  * @since 3.0.0
  */
-public class NewTimerTask extends TimerTask {
+class NewTimerTask extends TimerTask {
     private static Logger logger = Logger.getLogger(NewTimerTask.class);
     int value = 0;
     int count = 0;//
@@ -74,7 +74,9 @@ public class NewTimerTask extends TimerTask {
                     // } catch (InterruptedException e) {
                     // e.printStackTrace();
                     // }
-                    // if (Thread.currentThread().getName().equals("pool-1-thread-1".trim())) {
+                    // if
+                    // (Thread.currentThread().getName().equals("pool-1-thread-1".trim()))
+                    // {
                     // try {
                     // Thread.sleep(10000);
                     // } catch (InterruptedException e) {

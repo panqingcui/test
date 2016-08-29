@@ -5,7 +5,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-public class ExecutorServiceTest {
+class ExecutorServiceTest {
     public static void main(String[] args) throws IOException, InterruptedException {
         // 创建一个固定大小的线程池
         ExecutorService service = Executors.newCachedThreadPool();

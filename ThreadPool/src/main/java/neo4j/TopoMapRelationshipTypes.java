@@ -8,8 +8,6 @@
  */
 package neo4j;
 
-import org.neo4j.graphdb.RelationshipType;
-
-public enum TopoMapRelationshipTypes implements RelationshipType {
+/*public enum TopoMapRelationshipTypes implements RelationshipType {
     ROOT, HAS, CONNECTION
-}
+}*/

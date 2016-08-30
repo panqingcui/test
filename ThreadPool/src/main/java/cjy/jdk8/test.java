@@ -4,10 +4,6 @@
  */
 package cjy.jdk8;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-
 /**
  * <p>功能描述,该部分必须以中文句号结尾。<p>
  *
@@ -17,7 +13,7 @@ import java.sql.ResultSet;
  * @since 1.0.0
  */
 public class test {
-    public static boolean updatePassword(String username, String password, String newpassword) {
+   /* public static boolean updatePassword(String username, String password, String newpassword) {
         return connection(conn -> statement(conn, "select id, password from user where username = ?", stmt -> {
             stmt.setString(1, username);
             return resultSet(stmt, rs -> {
@@ -91,5 +87,5 @@ public class test {
             safeClose(rs);
         }
         return result;
-    }
+    }*/
 }

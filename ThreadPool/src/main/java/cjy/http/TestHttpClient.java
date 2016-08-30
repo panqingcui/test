@@ -4,12 +4,6 @@
  */
 package cjy.http;
 
-import java.io.UnsupportedEncodingException;
-import java.util.HashMap;
-import java.util.Map;
-
-import com.alibaba.fastjson.JSONObject;
-
 /**
  * <p>功能描述,该部分必须以中文句号结尾。<p>
  *
@@ -19,7 +13,7 @@ import com.alibaba.fastjson.JSONObject;
  * @since 1.0.0
  */
 public class TestHttpClient {
-    public static void main(String[] args) throws UnsupportedEncodingException {
+   /* public static void main(String[] args) throws UnsupportedEncodingException {
         Map<String, String> headers = new HashMap<String, String>();
         headers.put("realm", "36v8tudu9Z");
         headers.put("remote_addr", "192.168.1.0");
@@ -53,5 +47,5 @@ public class TestHttpClient {
         // HttpClientServiceImpl().sendHttpPost("http://172.19.83.94:8181/rest/configer",
         // object.toJSONString(), headers);
         System.out.println(result);
-    }
+    }*/
 }

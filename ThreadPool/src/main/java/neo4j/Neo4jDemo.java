@@ -1,19 +1,7 @@
 package neo4j;
 
-import org.apache.log4j.Logger;
-import org.neo4j.graphdb.GraphDatabaseService;
-import org.neo4j.graphdb.Node;
-import org.neo4j.graphdb.Path;
-import org.neo4j.graphdb.RelationshipType;
-import org.neo4j.graphdb.Transaction;
-import org.neo4j.graphdb.index.Index;
-import org.neo4j.graphdb.traversal.TraversalDescription;
-import org.neo4j.graphdb.traversal.Traverser;
-import org.neo4j.kernel.Traversal;
-import org.neo4j.rest.graphdb.RestGraphDatabase;
-
 public class Neo4jDemo {
-    private final static Logger logger = Logger.getLogger(Neo4jDemo.class);
+  /*  private final static Logger logger = Logger.getLogger(Neo4jDemo.class);
 
     private static enum RelationshipTypes implements RelationshipType {
         PUBLISH, CONTAIN, ROOT, HAS, CONNECTION
@@ -29,9 +17,9 @@ public class Neo4jDemo {
         });
     }
 
-    /**
+    *//**
      * 创建节点 边
-     */
+     *//*
     public static void useNodeAndRelationship() {
         GraphDatabaseService db = new RestGraphDatabase("http://192.168.2.186:7474/db/data");
         Transaction tx = db.beginTx();
@@ -91,5 +79,5 @@ public class Neo4jDemo {
         // useNodeAndRelationship();
         // useIndex();
         useTral();
-    }
+    }*/
 }

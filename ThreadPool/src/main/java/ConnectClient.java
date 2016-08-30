@@ -1,16 +1,3 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import ch.ethz.ssh2.Connection;
-import ch.ethz.ssh2.Session;
-import ch.ethz.ssh2.StreamGobbler;
-
 /**
  * 
  * <p>获取ssh连接。<p>
@@ -21,7 +8,7 @@ import ch.ethz.ssh2.StreamGobbler;
  * @since 3.0.0
  */
 public class ConnectClient {
-    private static Map<String, Connection> sessionCache = null;
+   /* private static Map<String, Connection> sessionCache = null;
 
     public Connection getConnection() {
         // FileInputStream is;
@@ -87,5 +74,5 @@ public class ConnectClient {
             // System.exit(2);
         }
         return values;
-    }
+    }*/
 }

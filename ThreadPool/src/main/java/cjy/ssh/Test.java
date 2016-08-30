@@ -1,18 +1,7 @@
 package cjy.ssh;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
-
-import ch.ethz.ssh2.Connection;
-import ch.ethz.ssh2.Session;
-import ch.ethz.ssh2.StreamGobbler;
-
 public class Test {
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         ConnectClient client = new ConnectClient();
         Connection conn = client.getConnection("192.168.2.248", "root", "antsoldier1234");
         List listbuf = runCommand(conn, "ls -t");
@@ -39,5 +28,5 @@ public class Test {
             // System.exit(2);
         }
         return values;
-    }
+    }*/
 }

@@ -1,13 +1,7 @@
 package cjy.ssh;
 
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
-
-import ch.ethz.ssh2.Connection;
-
 public class ConnectClient {
-    private static Map<String, Connection> sessionCache = null;
+   /* private static Map<String, Connection> sessionCache = null;
 
     public Connection getConnection(String hostip, String username, String password) {
         Connection connect = null;
@@ -37,5 +31,5 @@ public class ConnectClient {
             return conn;
         }
         return null;
-    }
+    }*/
 }

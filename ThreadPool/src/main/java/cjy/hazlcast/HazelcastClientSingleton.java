@@ -1,15 +1,7 @@
 package cjy.hazlcast;
 
-import java.util.Map;
-
-import com.hazelcast.client.HazelcastClient;
-import com.hazelcast.client.config.ClientConfig;
-import com.hazelcast.config.GroupConfig;
-import com.hazelcast.core.HazelcastInstance;
-import com.hazelcast.core.IMap;
-
 public class HazelcastClientSingleton {
-    // HAZELCAST连接
+/*    // HAZELCAST连接
     private HazelcastInstance hazelcastClient;
 
     HazelcastClientSingleton() {
@@ -40,5 +32,5 @@ public class HazelcastClientSingleton {
 
     public static void main(String[] args) {
         new HazelcastClientSingleton().test();
-    }
+    }*/
 }

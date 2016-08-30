@@ -16,18 +16,8 @@ package cjy.activemq;
  * @version $Revision$ $Date$
  * @since 3.0.0
  */
-import javax.jms.Connection;
-import javax.jms.ConnectionFactory;
-import javax.jms.Destination;
-import javax.jms.MessageConsumer;
-import javax.jms.Session;
-import javax.jms.TextMessage;
-
-import org.apache.activemq.ActiveMQConnection;
-import org.apache.activemq.ActiveMQConnectionFactory;
-
 public class Receiver {
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
         // ConnectionFactory ：连接工厂，JMS 用它创建连接
         ConnectionFactory connectionFactory;
         // Connection ：JMS 客户端到JMS Provider 的连接
@@ -67,5 +57,5 @@ public class Receiver {
                     connection.close();
             } catch (Throwable ignore) {}
         }
-    }
+    }*/
 }

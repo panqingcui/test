@@ -8,14 +8,6 @@
  */
 package neo4j;
 
-import java.io.File;
-import java.util.Properties;
-
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-import org.neo4j.graphdb.GraphDatabaseService;
-import org.neo4j.rest.graphdb.RestGraphDatabase;
-
 /**
  * <p>功能描述,该部分必须以中文句号结尾。<p>
  * 
@@ -25,7 +17,7 @@ import org.neo4j.rest.graphdb.RestGraphDatabase;
  * @since 3.0.0
  */
 public class Activator {
-    private static final Log m_log = LogFactory.getLog(Activator.class);
+   /* private static final Log m_log = LogFactory.getLog(Activator.class);
     // neo4j服务
     public static GraphDatabaseService db;
     // 数据库路径
@@ -49,5 +41,5 @@ public class Activator {
                 graphDb.shutdown();
             }
         });
-    }
+    }*/
 }

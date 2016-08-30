@@ -1,20 +1,10 @@
 package cjy.guava;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.TimeUnit;
-
-import com.google.common.base.MoreObjects;
-import com.google.common.cache.CacheBuilder;
-import com.google.common.cache.CacheLoader;
-import com.google.common.cache.LoadingCache;
-
 /**
  * @author Mikhail Baturov | www.yetanothercoder.ru
  */
 public class GuavaTester {
-    public static void main(String args[]) throws InterruptedException {
+   /* public static void main(String args[]) throws InterruptedException {
         // create a cache for employees based on their employee id
         LoadingCache<String, Employee> employeeCache = CacheBuilder.newBuilder().maximumSize(100).expireAfterWrite // maximum
         (3000, TimeUnit.MILLISECONDS) // cache will expire after 30 minutes of access
@@ -100,5 +90,5 @@ class Employee {
     public String toString() {
         return MoreObjects.toStringHelper(Employee.class).add("Name", name).add("Department", dept).add("Emp Id", emplD)
                 .toString();
-    }
+    }*/
 }

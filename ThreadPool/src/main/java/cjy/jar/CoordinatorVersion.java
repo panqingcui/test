@@ -1,15 +1,6 @@
 
 package cjy.jar;
 
-import java.io.InputStream;
-import java.net.URL;
-import java.util.jar.Attributes.Name;
-import java.util.jar.Manifest;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import com.antfact.coordinator.exception.CoordinatorException;
-
 /**
  * <p>功能描述,该部分必须以中文句号结尾。<p>
  *
@@ -19,7 +10,7 @@ import com.antfact.coordinator.exception.CoordinatorException;
  * @since 1.0.0
  */
 public class CoordinatorVersion {
-    private static final CoordinatorVersion INSTANCE = new CoordinatorVersion(CoordinatorVersion.class);
+    /*private static final CoordinatorVersion INSTANCE = new CoordinatorVersion(CoordinatorVersion.class);
     private final Manifest manifest;
 
     public CoordinatorVersion(Class<?> clazz) throws CoordinatorException {
@@ -70,5 +61,5 @@ public class CoordinatorVersion {
             }
         }
         return null;
-    }
+    }*/
 }

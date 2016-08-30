@@ -13,8 +13,6 @@
  */
 package cjy.archaius;
 
-import com.netflix.config.ConcurrentCompositeConfiguration;
-import com.netflix.config.ConcurrentMapConfiguration;
 import com.netflix.config.DynamicPropertyFactory;
 
 /**
@@ -29,7 +27,7 @@ import com.netflix.config.DynamicPropertyFactory;
  * 
  */
 public class SampleApplicationWithDefaultConfiguration {
-    static {
+ /*   static {
         // sampleapp.properties is packaged within the shipped jar file
         System.setProperty("archaius.configurationSource.defaultFileName", "sampleapp.properties");
         System.setProperty(DynamicPropertyFactory.ENABLE_JMX, "false");
@@ -56,5 +54,5 @@ public class SampleApplicationWithDefaultConfiguration {
         // subConfig added above
         System.out.println("SampleBean:" + sampleBean);
         System.out.println(sampleBean.getName());
-    }
+    }*/
 }

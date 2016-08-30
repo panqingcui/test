@@ -9,7 +9,7 @@ package cjy.jar;
  * @since 1.0.0
  */
 public class CoordinatorVersion {
-<<<<<<< HEAD
+
     /*private static final CoordinatorVersion INSTANCE = new CoordinatorVersion(CoordinatorVersion.class);
     private final Manifest manifest;
 
@@ -62,62 +62,5 @@ public class CoordinatorVersion {
         }
         return null;
     }*/
-=======
-    // private static final CoordinatorVersion INSTANCE = new
-    // CoordinatorVersion(CoordinatorVersion.class);
-    // private final Manifest manifest;
-    //
-    // public CoordinatorVersion(Class<?> clazz) throws CoordinatorException {
-    // Manifest resolvedManifest = null;
-    // try {
-    // String jarUrl = resolveJarUrl(clazz);
-    // if (jarUrl != null) {
-    // resolvedManifest = loadManifest(jarUrl);
-    // }
-    // } catch (Throwable e) {
-    // throw new CoordinatorException(CoordinatorException.COORDINATOR_VERSION_EXCEPTION,
-    // "解析jar时异常", e);
-    // }
-    // this.manifest = resolvedManifest;
-    // }
-    //
-    // String getBuildVersion() {
-    // return getManifestAttribute("Implementation-Version", "<version_unknown>");
-    // }
-    //
-    // String getManifestAttribute(String name, String defaultValue) {
-    // if (manifest == null) {
-    // return defaultValue;
-    // }
-    // Name attrName = new Name(name);
-    // Object value = manifest.getMainAttributes().get(attrName);
-    // return value == null ? defaultValue : value.toString();
-    // }
-    //
-    // public static String buildVersion() {
-    // return INSTANCE.getBuildVersion();
-    // }
-    //
-    // private static Manifest loadManifest(String jarUrl) throws Exception {
-    // InputStream is = new URL(jarUrl + "!/META-INF/MANIFEST.MF").openStream();
-    // try {
-    // return new Manifest(is);
-    // } finally {
-    // is.close();
-    // }
-    // }
-    //
-    // private static String resolveJarUrl(Class<?> clazz) {
-    // URL location = clazz.getResource('/' + clazz.getName().replace('.', '/') +
-    // ".class");
-    // if (location != null) {
-    // Matcher matcher =
-    // Pattern.compile("(jar:file.*-[\\d.]+(-SNAPSHOT)?.jar)!.*$").matcher(location.toString());
-    // if (matcher.matches()) {
-    // return matcher.group(1);
-    // }
-    // }
-    // return null;
-    // }
->>>>>>> 5502dd1dae6d6275b7ebb5ff58ee58be5cb74455
+
 }

@@ -20,19 +20,19 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-<!--     <dependency> -->
-<!--     <groupId>com.antfact.oplate</groupId> -->
-<!--   <artifactId>oplate-util</artifactId> -->
-<!--   <version>1.1.0-SNAPSHOT</version> -->
-<!--     </dependency> -->
+     <dependency> 
+     <groupId>com.antfact.oplate</groupId>
+   <artifactId>oplate-util</artifactId>
+   <version>1.1.0-SNAPSHOT</version>
+     </dependency> 
     <dependency>
 	<groupId>commons-logging</groupId>
 	<artifactId>commons-logging</artifactId>
 	<version>1.2</version>
 </dependency>
     <dependency>
-    	<groupId>com.antfact.oplate</groupId>
-    	<artifactId>oplate-configuration-client</artifactId>
+    	<groupId>com.antfact.configer</groupId>
+    	<artifactId>antfact-configer-client</artifactId>
     	<version>1.1.0-SNAPSHOT</version>
     </dependency>
     <dependency>
@@ -68,12 +68,49 @@
 	 	<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
-			<version>18.0</version>
+			<version>19.0</version>
 			<optional>true</optional>
 		</dependency>
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>5.1.38</version>
+	</dependency>
+	<dependency>
+	<groupId>org.slf4j</groupId>
+	<artifactId>slf4j-log4j12</artifactId>
+	<version>1.7.21</version>
+</dependency>
+		<dependency>
+	<groupId>org.slf4j</groupId>
+	<artifactId>slf4j-simple</artifactId>
+	<version>1.7.21</version>
+</dependency>
+		
+		 <dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-api</artifactId>
+		<version>1.7.0</version>
+		<optional>true</optional>
+	</dependency>
+	<dependency>
+		<groupId>com.antfact.coordinator</groupId>
+  		<artifactId>coordinator-discovery</artifactId>
+  		<version>1.1.0-SNAPSHOT</version>
+	</dependency>	
   </dependencies>
   <build>
 		<plugins>
+		<plugin> 
+           <groupId>org.apache.maven.plugins</groupId> 
+           <artifactId>maven-compiler-plugin</artifactId>
+           <version>3.1</version> 
+           <configuration> 
+             <source>1.8</source>  
+       		 <target>1.8</target>  
+             <encoding>UTF-8</encoding> 
+           </configuration> 
+        </plugin> 
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-bundle-plugin</artifactId>
@@ -88,7 +125,7 @@
  								org.apache.commons.logging*,
 							*;resolution:=optional
 						</Import-Package>
-						<Embed-Dependency>commons-logging,oplate-config-client,archaius-core,commons-configuration,httpclient,httpcore,fastjson,guava,oplate-configuration-client</Embed-Dependency>
+						<Embed-Dependency>commons-logging,oplate-config-client,archaius-core,commons-configuration,httpclient,httpcore,fastjson,guava,oplate-configuration-client,mysql-connector-java</Embed-Dependency>
 						<Embed-Directory>lib</Embed-Directory>
 						<Include-Resource>/OSGI-INF=./OSGI-INF,src/main/resources</Include-Resource>
 					</instructions>

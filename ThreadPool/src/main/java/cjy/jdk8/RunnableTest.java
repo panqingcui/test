@@ -4,8 +4,6 @@
  */
 package cjy.jdk8;
 
-import java.util.Arrays;
-
 /**
  * <p>功能描述,该部分必须以中文句号结尾。<p>
  * 
@@ -16,12 +14,27 @@ import java.util.Arrays;
  */
 public class RunnableTest {
     public static void main(String[] args) {
-        // JButton btn = new JButton();
-        // btn.addActionListener(
-        // e -> System.out.println("Event Source is: " + e.getSource())
-        // );
-        Arrays.asList("a", "b", "d").forEach(e -> System.out.println(e));
-        Arrays.asList("a", "c", "d").forEach((String a) -> System.out.print(a));
-        // Arrays.asList("a", "b", "c").forEach(action);
+        while (true) {
+            new Runnable() {
+                public void run() {
+                    try {
+                        Thread.sleep(10000);
+                    } catch (InterruptedException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+                }
+            };
+            new Runnable() {
+                public void run() {
+                    try {
+                        Thread.sleep(10000);
+                    } catch (InterruptedException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+                }
+            };
+        }
     }
 }

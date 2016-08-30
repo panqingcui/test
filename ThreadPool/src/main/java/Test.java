@@ -7,81 +7,18 @@ import javax.sound.midi.Patch;
 
 public class Test {
     public static void main(String[] args) throws UnsupportedEncodingException {
-        // SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss.SSS");
-        // System.out.println(sdf.format(new Date()));
-        // System.out.println(new Date().getTime());
-        // TopoStartScanCommand tsc = new TopoStartScanCommand();
-        // boolean isconfig = !("Win32_Remote_Terminal".contains("Terminal"));
-        // System.out.println(isconfig);
-        // }
-        // System.out.println(23 % 12);
-        // SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        // long l = 1409241600000l;
-        // Date date = new Date(l);
-        // System.out.println(sdf.format(date));
-        // List list = new ArrayList();
-        // User user = new User();
-        // user.setId("1");
-        // user.setName("1");
-        // list.add(user);
-        // user.setId("2");
-        // user.setName("2");
-        // list.add(user);
-        // user.setId("3");
-        // user.setName("3");
-        // list.add(user);
-        // SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
-        // long l = 1420460700000l;
-        // Date date = new Date(l);
-        // System.out.println(sdf.format(date));
-        // // System.out.println("172.19.104.254_switch_25".contains("Switch"));
-        // Pattern pattern = Pattern.compile(".+@[^.@]+(\\.[^.@]+)+$");
-        // String str = "pan-qing-cui@163.com";
-        // System.out.println(str.matches("^\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]w+)*$"));
-        // String from = "蚁巡<chenjunying@antrol.co>";
-        // int leftSign = (from = from.trim()).charAt(from.length() - 1) == '>' ?
-        // from.lastIndexOf('<') : -1;
-        // System.out.println(leftSign);
-        // long ipaddress = 2886952714l;
-        // System.out.println(longToString(ipaddress));
-        // String s = "";
-        // if ("".equals(s.trim())) {
-        // System.out.println("s");
-        // }
-        long ip = 2886953231l;
-        System.out.println(longToString(ip));
-        ;
-        // long ll = 1404144000000l;
-        // System.out.println(longToString(ll));
-        // // // String s1 = null;
-        // // // System.out.println(s1.trim());
-        // // System.out.println(stringToLong("10.0.0.2"));
-        // String str = "192.168.83.201";
-        // System.out.println(stringToLong(str));
-        // String s = "192.168.2.255无法访问safadfasdfdsaf192.168.2.255无法访问";
-        // int i = s.lastIndexOf("192.168.2.255无法访问");
-        // s = s.substring(0, i);
-        // System.out.println(s);
-        // long s = System.currentTimeMillis();
-        // for (int i = 0; i < 6000; i++) {
-        // for (int j = 0; j < 6000; j++) {}
-        // }
-        // long e = System.currentTimeMillis() - s;
-        // System.out.println(e);
-        // List<String> list1 = new ArrayList<String>();
-        // List<String> list2 = new ArrayList<String>();
-        // list1.add("1");
-        // list1.add("2");
-        // list1.add("VMware Virtual Ethernet Adapter for VMnet8 ");
-        // list2.add("1");
-        // list2.add("VMware Virtual Ethernet Adapter for VMnet8");
-        // for (int i = 0; i < list1.size(); i++) {
-        // if (!list2.contains(list1.get(i))) {
-        // System.out.println(list1.get(i));
-        // }
-        // }
-        // String str = "内存利用率超出阈值范围,当前值：75.15%,正常范围：0%, - 58.1%,发生时间：18:19";
-        // System.out.println(str.getBytes("utf-8").length);
+        while (true) {
+            new Thread(new Runnable() {
+                public void run() {
+                    try {
+                        Thread.sleep(100000000);
+                    } catch (InterruptedException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+                }
+            }).start();
+        }
     }
 
     /**

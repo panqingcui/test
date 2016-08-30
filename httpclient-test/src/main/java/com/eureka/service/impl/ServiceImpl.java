@@ -4,14 +4,18 @@
  */
 package com.eureka.service.impl;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.antfact.oplate.config.client.ConfigClientManager;
+import com.antfact.oplate.config.client.exception.ConfigerException;
 import com.eureka.service.EurekaService;
+
+import util.DBUtil;
 
 /**
  * <p>功能描述,该部分必须以中文句号结尾。<p>
@@ -22,7 +26,8 @@ import com.eureka.service.EurekaService;
  * @since 1.0.0
  */
 public class ServiceImpl implements EurekaService {
-    private static final Log DISCOVERY_LOG = LogFactory.getLog(ServiceImpl.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ServiceImpl.class);
+
     // private ClientService clientService;
     //
     // public ClientService getClientService() {
@@ -33,42 +38,126 @@ public class ServiceImpl implements EurekaService {
     // DISCOVERY_LOG.error("test client.....");
     // this.clientService = clientService;
     // }
-
+    // public static void main(String[] args) {
+    // init();
+    // }
     public void init() {
-        List<String> list = new ArrayList<String>();
-        list.add("zookeeper.properties");
-        List<String> remoteList = new ArrayList<String>();
-        remoteList.add("/aa/test");
-        ConfigClientManager.loadChangeProperties(remoteList, list);
-        // clientService.loadChangeProperties(remoteList, list);
-        // String server = clientService.getPropValue("zookeeper.server", "", new
-        // Runnable() {
-        // @Override
-        // public void run() {
-        // DISCOVERY_LOG.error("值发生变化：" + clientService.getPropValue("zookeeper.server",
-        // ""));
-        // }
-        // });
-        ConfigClientManager.getPropValue("zookeeper.server", "", new Runnable() {
-            @Override
-            public void run() {
-                DISCOVERY_LOG.error("值发生变化：" + ConfigClientManager.getPropValue("zookeeper.server", ""));
-            }
-        });
-        // clientService.loadChangeProperties("test.cfg");
-        ConfigClientManager.loadChangeProperties("test.cfg");
-        ConfigClientManager.loadProperties("test1.cfg");
+        // "D:" + File.separator + "oplate" + File.separator + "oplate-config" +
+        // File.separator + "assemblies" + File.separator + "oplate-config-assembly" +
+        // File.separator + "src" + File.separator + "main" + File.separator +
+        // "filtered-resources" + File.separator + "etc" + File.separator +
+        // "zookeeper.properties"
+        //
+        // 上传本地文件到远程
+        // public static boolean uploadPropertyGroup(String nodeName, String fileName)
+        // nodeName 节点名称,fileName本地文件名称
+        try {
+            ConfigClientManager.getInstance()
+                    .uploadPropertyGroup("/antfact/15TqaEat1Aq6bA6C14xJ8E90BwT65ZcD/1.1.0/mysql", "mysql.properties");
+        } catch (ConfigerException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        // 加载远程mysql配置与本地配置,优先使用远程配置;动态加载远程配置 loadChangeProperties(String nodePath, String
+        // localFileName);nodePath:远程zk节点名称;localFileName：本地文件名,默认加载karaf.home/etc
+        try {
+            ConfigClientManager.getInstance()
+                    .loadChangeProperties("/antfact/15TqaEat1Aq6bA6C14xJ8E90BwT65ZcD/1.1.0/mysql", "mysql.properties");
+        } catch (ConfigerException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        // 加载远程配置或本地文件;配置动态加载;如加载远程配置,参数为远程zk节点名称;如加载本地文件,则是本地文件名称
+        try {
+            ConfigClientManager.getInstance().loadChangeProperties("zookeeper.properties");
+        } catch (ConfigerException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        // // 加载本地文件;非动态加载
+        try {
+            ConfigClientManager.getInstance().loadProperties("eureka-client.properties");
+        } catch (ConfigerException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        // 动态获取值例子参见DBUtil
         while (true) {
+            // getPropValue(String propName, String defaultValue)
+            // propName:属性名称;defaultValue:默认值
+            // 获取属性值
+            LOGGER.error("mysql.url:" + ConfigClientManager.getInstance().getPropValue("mysql.url", ""));
+            Statement stmt = null;
+            ResultSet rs = null;
             try {
-                Thread.sleep(10000);
+                stmt = DBUtil.INSTANCE.getConn().createStatement();
+                String sql = "select * from test";
+                rs = stmt.executeQuery(sql);
+                LOGGER.error("输出结果集：");
+                while (rs.next()) {
+                    LOGGER.error(rs.getString("name") + "");
+                }
+            } catch (SQLException e) {
+                LOGGER.error("" + e);
+                e.printStackTrace();
+            } finally {
+                if (rs != null) {
+                    try {
+                        rs.close();
+                    } catch (SQLException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+                }
+                if (stmt != null) {
+                    try {
+                        stmt.close();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+            try {
+                Thread.sleep(20000);
             } catch (InterruptedException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
-            DISCOVERY_LOG.error("zookeeper地址：" + ConfigClientManager.getPropValue("zookeeper.server", ""));
-            DISCOVERY_LOG.error("test cfg：" + ConfigClientManager.getPropValue("aa", ""));
-            DISCOVERY_LOG.error("test1 cfg：" + ConfigClientManager.getPropValue("ssss", ""));
         }
+        // // clientService.loadChangeProperties(remoteList, list);
+        // // String server = clientService.getPropValue("zookeeper.server", "", new
+        // // Runnable() {
+        // // @Override
+        // // public void run() {
+        // // DISCOVERY_LOG.error("值发生变化：" +
+        // clientService.getPropValue("zookeeper.server",
+        // // ""));
+        // // }
+        // // });
+        // String s = ConfigClientManager.getPropValue("zk.port", "", new Runnable() {
+        // @Override
+        // public void run() {
+        // DISCOVERY_LOG.error("值发生变化：" +
+        // ConfigClientManager.getPropValue("zookeeper.address", ""));
+        // }
+        // });
+        // // clientService.loadChangeProperties("test.cfg");
+        // // ConfigClientManager.loadChangeProperties("test.cfg");
+        // // ConfigClientManager.loadProperties("test1.cfg");
+        // while (true) {
+        // try {
+        // Thread.sleep(10000);
+        // } catch (InterruptedException e) {
+        // // TODO Auto-generated catch block
+        // e.printStackTrace();
+        // }
+        // DISCOVERY_LOG.error("zookeeper地址：" +
+        // ConfigClientManager.getPropValue("zk.server", ""));
+        // DISCOVERY_LOG.error("zookeeper地址：" +
+        // ConfigClientManager.getPropValue("zk.port", ""));
+        // DISCOVERY_LOG.error("test cfg：" + ConfigClientManager.getPropValue("aa", ""));
+        // DISCOVERY_LOG.error("test1 cfg：" + ConfigClientManager.getPropValue("ssss",
+        // ""));
+        // }
         // clientService.loadProperties("zookeeper.properties");
         // String server1 = clientService.getPropValue("zookeeper.server", "");
         // DISCOVERY_LOG.error("server1:" + server1);
